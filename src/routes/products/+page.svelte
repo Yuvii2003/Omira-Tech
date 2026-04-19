@@ -91,7 +91,6 @@
 				</main>
 			</div>
 		</div>
-		<div class="ml-[14%] flex flex-row justify-center gap-16">
 		<div class="flex flex-row justify-center gap-8 md:ml-[14%] md:gap-16">
 			{#if currentPage > 1}
 				<Button color="light" class="w-24" on:click={() => fetchData(currentPage - 1)}>
