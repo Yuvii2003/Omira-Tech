@@ -80,13 +80,13 @@
 		<Spinner color="purple" />
 	</div>
 {:else}
-	<div class="mb-5 flex flex-col gap-10 px-4 md:px-0">
+	<div class="mx-auto mb-5 flex max-w-7xl flex-col gap-10 px-4 md:px-0">
 		<div class="flex flex-col">
 			<div class="flex flex-col items-start gap-8 md:flex-row">
 				<aside class="w-full shrink-0 md:w-64 lg:w-72">
 					<LeftNav on:click={sortByCategoryNav} on:fetchAll={handlefetchAll} />
 				</aside>
-				<main class="w-full min-w-0 flex-1">
+				<main class="flex w-full min-w-0 flex-1 justify-center">
 					<RightContent {products} on:sort={sortData} />
 				</main>
 			</div>
