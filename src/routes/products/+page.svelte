@@ -82,11 +82,16 @@
 {:else}
 	<div class="mb-5 flex flex-col gap-10 px-4 md:px-0">
 		<div class="flex flex-col">
-			<div class="flex flex-col gap-8 md:flex-row">
-				<LeftNav on:click={sortByCategoryNav} on:fetchAll={handlefetchAll} />
-				<RightContent {products} on:sort={sortData} />
+			<div class="flex flex-col items-start gap-8 md:flex-row">
+				<aside class="w-full shrink-0 md:w-64 lg:w-72">
+					<LeftNav on:click={sortByCategoryNav} on:fetchAll={handlefetchAll} />
+				</aside>
+				<main class="w-full min-w-0 flex-1">
+					<RightContent {products} on:sort={sortData} />
+				</main>
 			</div>
 		</div>
+		<div class="ml-[14%] flex flex-row justify-center gap-16">
 		<div class="flex flex-row justify-center gap-8 md:ml-[14%] md:gap-16">
 			{#if currentPage > 1}
 				<Button color="light" class="w-24" on:click={() => fetchData(currentPage - 1)}>
