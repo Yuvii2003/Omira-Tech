@@ -44,5 +44,8 @@
 		"mongoose": "^8.5.2",
 		"svelte-french-toast": "^1.2.0",
 		"uuid": "^10.0.0"
+	},
+	"engines": {
+		"node": "20.x"
 	}
 }
